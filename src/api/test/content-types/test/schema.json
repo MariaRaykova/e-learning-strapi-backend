@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tests",
+  "info": {
+    "singularName": "test",
+    "pluralName": "tests",
+    "displayName": "Test",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "test_title": {
+      "type": "string"
+    },
+    "test_description": {
+      "type": "text"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "inversedBy": "tests"
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::question.question",
+      "mappedBy": "test"
+    }
+  }
+}

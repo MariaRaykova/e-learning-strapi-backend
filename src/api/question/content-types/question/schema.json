@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "Question",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "question_text": {
+      "type": "text"
+    },
+    "answers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::answer.answer",
+      "mappedBy": "question"
+    },
+    "test": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::test.test",
+      "inversedBy": "questions"
+    },
+    "Answer": {
+      "displayName": "Answer",
+      "type": "component",
+      "repeatable": true,
+      "component": "answer.answer"
+    }
+  }
+}
