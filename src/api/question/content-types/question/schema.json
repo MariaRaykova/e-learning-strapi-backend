@@ -12,26 +12,22 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "question_text": {
+    "question": {
       "type": "text"
     },
-    "answers": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::answer.answer",
-      "mappedBy": "question"
+    "answer": {
+      "displayName": "answer",
+      "type": "component",
+      "repeatable": true,
+      "component": "answer-option.answer",
+      "max": 5,
+      "required": false
     },
     "test": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::test.test",
       "inversedBy": "questions"
-    },
-    "Answer": {
-      "displayName": "Answer",
-      "type": "component",
-      "repeatable": true,
-      "component": "answer.answer"
     }
   }
 }

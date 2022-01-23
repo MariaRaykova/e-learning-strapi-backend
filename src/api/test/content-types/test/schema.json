@@ -12,17 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "test_title": {
+    "test_name": {
       "type": "string"
     },
-    "test_description": {
-      "type": "text"
-    },
-    "courses": {
+    "course": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToOne",
       "target": "api::course.course",
-      "inversedBy": "tests"
+      "inversedBy": "test"
     },
     "questions": {
       "type": "relation",

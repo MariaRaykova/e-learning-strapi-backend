@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_answer_answers",
+  "collectionName": "components_answer_option_answers",
   "info": {
-    "displayName": "Answer",
+    "displayName": "answer",
     "icon": "angle-right"
   },
   "options": {},

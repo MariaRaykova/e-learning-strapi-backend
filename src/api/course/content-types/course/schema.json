@@ -4,18 +4,18 @@
   "info": {
     "singularName": "course",
     "pluralName": "courses",
-    "displayName": "course"
+    "displayName": "Course"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "course_title": {
+    "course_name": {
       "type": "string"
     },
     "course_description": {
-      "type": "richtext"
+      "type": "text"
     },
     "course_image": {
       "allowedTypes": [
@@ -24,7 +24,7 @@
         "videos"
       ],
       "type": "media",
-      "multiple": false
+      "multiple": true
     },
     "course_video": {
       "allowedTypes": [
@@ -35,11 +35,14 @@
       "type": "media",
       "multiple": true
     },
-    "tests": {
+    "course_price": {
+      "type": "decimal"
+    },
+    "test": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToOne",
       "target": "api::test.test",
-      "mappedBy": "courses"
+      "mappedBy": "course"
     }
   }
 }
